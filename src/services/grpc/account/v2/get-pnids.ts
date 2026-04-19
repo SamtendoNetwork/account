@@ -1,4 +1,3 @@
-// import { Status, ServerError } from 'nice-grpc';
 import { getPNIDByPID } from '@/database';
 import { PNID_PERMISSION_FLAGS } from '@/types/common/permission-flags';
 import { config } from '@/config-manager';
