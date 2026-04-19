@@ -34,6 +34,7 @@ import { updateBan } from '@/services/grpc/account/v2/update-ban';
 import { pardonBan } from '@/services/grpc/account/v2/pardon-ban';
 import { listBanComments } from '@/services/grpc/account/v2/list-ban-comments';
 import { createBanComment } from '@/services/grpc/account/v2/create-ban-comment';
+import { getPNIDs } from '@/services/grpc/account/v2/get-pnids';
 import type { AccountServiceImplementation } from '@pretendonetwork/grpc/account/v2/account_service';
 
 export const accountServiceImplementationV2: AccountServiceImplementation = {
@@ -72,5 +73,6 @@ export const accountServiceImplementationV2: AccountServiceImplementation = {
 	updateBan,
 	pardonBan,
 	listBanComments,
-	createBanComment
+	createBanComment,
+	getPNIDs
 };
