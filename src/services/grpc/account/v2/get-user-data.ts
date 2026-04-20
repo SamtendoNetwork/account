@@ -19,6 +19,7 @@ export async function getUserData(request: GetUserDataRequest): Promise<GetUserD
 		linked_pids: pnid.pid
 	})).map((device) => {
 		return {
+			deviceId: device.device_id,
 			model: device.get('model'), // ".model" gives the Mongoose model...
 			serial: device.serial,
 			linkedPids: device.linked_pids,

@@ -130,6 +130,11 @@ const PNIDSchema = new Schema<IPNID, PNIDModel, IPNIDMethods>({
 	}
 }, { id: false });
 
+PNIDSchema.index({ pid: 1 });
+PNIDSchema.index({ usernameLower: 1 });
+// Used for the admin panel querying
+PNIDSchema.index({ 'pid': 1, 'username': 1, 'connections.discord.id': 1 });
+
 PNIDSchema.plugin(uniqueValidator, { message: '{PATH} already in use.' });
 
 /*
