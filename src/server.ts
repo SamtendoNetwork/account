@@ -16,7 +16,7 @@ import api from '@/services/api';
 import localcdn from '@/services/local-cdn';
 import assets from '@/services/assets';
 import { config, disabledFeatures } from '@/config-manager';
-import { startProvisioner } from './provisioning';
+import { startProvisioner } from '@/provisioning';
 
 process.title = 'Pretendo - Account';
 process.on('uncaughtException', (err, origin) => {
