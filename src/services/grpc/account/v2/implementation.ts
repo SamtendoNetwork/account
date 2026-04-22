@@ -4,11 +4,6 @@ import { getNEXPassword } from '@/services/grpc/account/v2/get-nex-password';
 import { getNEXData } from '@/services/grpc/account/v2/get-nex-data';
 import { updatePNIDPermissions } from '@/services/grpc/account/v2/update-pnid-permissions';
 import { exchangeTokenForUserData } from '@/services/grpc/account/v2/exchange-token-for-user-data';
-import { exchangeOAuthTokenForUserData } from '@/services/grpc/account/v2/exchange-oauth-token-for-user-data';
-import { exchangeNEXTokenForUserData } from '@/services/grpc/account/v2/exchange-nex-token-for-user-data';
-import { exchangeIndependentServiceTokenForUserData } from '@/services/grpc/account/v2/exchange-independent-service-token-for-user-data';
-import { exchangePasswordResetTokenForUserData } from '@/services/grpc/account/v2/exchange-password-reset-token-for-user-data';
-import { validateIndependentServiceToken } from '@/services/grpc/account/v2/validate-independent-service-token';
 import { deleteAccount } from '@/services/grpc/account/v2/delete-account';
 import { getPNIDs } from '@/services/grpc/account/v2/get-pnids';
 import type { ServiceImplementation } from 'nice-grpc';
@@ -25,7 +20,7 @@ export const accountServiceImplementationV2: ServiceImplementation<AccountServic
 	updatePNIDPermissions,
 	exchangeTokenForUserData,
 	deleteAccount,
-  getPNIDs,
+	getPNIDs,
 
 	// The following methods are not yet implemented
 	createAuditLogComment: notImplemented,
