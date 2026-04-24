@@ -9,50 +9,6 @@ export async function getPNIDs(request: GetPNIDsRequest): Promise<GetPNIDsRespon
 	for (const pid of request.pid) {
 		const pnid = await getPNIDByPID(pid);
 		if (!pnid) {
-			response.userData[pid] = {
-				deleted: true,
-				pid: pid,
-				username: 'Unknown',
-				accessLevel: -1,
-				serverAccessLevel: 'prod',
-				mii: {
-					name: 'Unknown',
-					data: '',
-					url: ''
-				},
-				creationDate: '',
-				birthdate: '',
-				gender: '',
-				country: '',
-				language: '',
-				emailAddress: '',
-				tierName: '',
-				permissions: {
-					bannedAllPermanently: false,
-					bannedAllTemporarily: false,
-					betaAccess: false,
-					accessAdminPanel: false,
-					createServerConfigs: false,
-					modifyServerConfigs: false,
-					deployServer: false,
-					modifyPnids: false,
-					modifyNexAccounts: false,
-					modifyConsoles: false,
-					banPnids: false,
-					banNexAccounts: false,
-					banConsoles: false,
-					moderateMiiverse: false,
-					createApiKeys: false,
-					createBossTasks: false,
-					updateBossTasks: false,
-					deleteBossTasks: false,
-					uploadBossFiles: false,
-					updateBossFiles: false,
-					deleteBossFiles: false,
-					updatePnidPermissions: false
-				},
-				linkedDevices: []
-			};
 			continue;
 		}
 
