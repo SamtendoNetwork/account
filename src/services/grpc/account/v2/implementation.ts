@@ -5,6 +5,7 @@ import { getNEXData } from '@/services/grpc/account/v2/get-nex-data';
 import { updatePNIDPermissions } from '@/services/grpc/account/v2/update-pnid-permissions';
 import { exchangeTokenForUserData } from '@/services/grpc/account/v2/exchange-token-for-user-data';
 import { deleteAccount } from '@/services/grpc/account/v2/delete-account';
+import { getPNIDs } from '@/services/grpc/account/v2/get-pnids';
 import type { ServiceImplementation } from 'nice-grpc';
 import type { AccountServiceDefinition } from '@pretendonetwork/grpc/account/v2/account_service';
 
@@ -19,6 +20,7 @@ export const accountServiceImplementationV2: ServiceImplementation<AccountServic
 	updatePNIDPermissions,
 	exchangeTokenForUserData,
 	deleteAccount,
+	getPNIDs,
 
 	// The following methods are not yet implemented
 	createAuditLogComment: notImplemented,
@@ -35,7 +37,6 @@ export const accountServiceImplementationV2: ServiceImplementation<AccountServic
 	getNEXAccount: notImplemented,
 	getPNID: notImplemented,
 	getServer: notImplemented,
-	getPNIDs: notImplemented,
 	issueBan: notImplemented,
 	listAuditLogComments: notImplemented,
 	listBans: notImplemented,
