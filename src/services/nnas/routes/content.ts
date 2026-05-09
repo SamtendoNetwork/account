@@ -37,14 +37,14 @@ router.get('/agreements/:type/:region/:version', (request: express.Request, resp
 						},
 						'main_text': {
 							'@index': '1',
-							'#cdata': 'Welcome to Pretendo\'s Christmas public beta! This is supplied with no liability or warranty, and is a stress test of our current services.This test is not expected to last long- term, and the data may be kept for later testing; this data will not be shared outside of Pretendo, and will be deleted at the end of our testing period.'
+							'#cdata': 'Welcome to the Samtendo Network public beta! Our services are very new and constantly improving, so please bare with us. If you run into any problems, please let us know.'
 						},
 						'sub_title': {
 							'#cdata': 'Privacy Policy'
 						},
 						'sub_text': {
 							'@index': '1',
-							'#cdata': 'Welcome to Pretendo\'s Christmas public beta! This is supplied with no liability or warranty, and is a stress test of our current services.This test is not expected to last long- term, and the data may be kept for later testing; this data will not be shared outside of Pretendo, and will be deleted at the end of our testing period.'
+							'#cdata': 'Welcome to the Samtendo Network public beta! Our services are very new and constantly improving, so please bare with us. If you run into any problems, please let us know.'
 						}
 					},
 					type: 'NINTENDO-NETWORK-EULA',
@@ -70,14 +70,14 @@ router.get('/agreements/:type/:region/:version', (request: express.Request, resp
 						},
 						'main_text': {
 							'@index': '1',
-							'#cdata': 'Welcome to Pretendo\'s Christmas public beta! This is supplied with no liability or warranty, and is a stress test of our current services.This test is not expected to last long- term, and the data may be kept for later testing; this data will not be shared outside of Pretendo, and will be deleted at the end of our testing period.'
+							'#cdata': 'Welcome to the Samtendo Network public beta! Our services are very new and constantly improving, so please bare with us. If you run into any problems, please let us know.'
 						},
 						'sub_title': {
 							'#cdata': 'Privacy Policy'
 						},
 						'sub_text': {
 							'@index': '1',
-							'#cdata': 'Welcome to Pretendo\'s Christmas public beta! This is supplied with no liability or warranty, and is a stress test of our current services.This test is not expected to last long- term, and the data may be kept for later testing; this data will not be shared outside of Pretendo, and will be deleted at the end of our testing period.'
+							'#cdata': 'Welcome to the Samtendo Network public beta! Our services are very new and constantly improving, so please bare with us. If you run into any problems, please let us know.'
 						}
 					},
 					type: 'NINTENDO-NETWORK-EULA',
@@ -103,14 +103,14 @@ router.get('/agreements/:type/:region/:version', (request: express.Request, resp
 						},
 						'main_text': {
 							'@index': '1',
-							'#cdata': 'Welcome to Pretendo\'s Christmas public beta! This is supplied with no liability or warranty, and is a stress test of our current services.This test is not expected to last long- term, and the data may be kept for later testing; this data will not be shared outside of Pretendo, and will be deleted at the end of our testing period.'
+							'#cdata': 'Welcome to the Samtendo Network public beta! Our services are very new and constantly improving, so please bare with us. If you run into any problems, please let us know.'
 						},
 						'sub_title': {
 							'#cdata': 'Privacy Policy'
 						},
 						'sub_text': {
 							'@index': '1',
-							'#cdata': 'Welcome to Pretendo\'s Christmas public beta! This is supplied with no liability or warranty, and is a stress test of our current services.This test is not expected to last long- term, and the data may be kept for later testing; this data will not be shared outside of Pretendo, and will be deleted at the end of our testing period.'
+							'#cdata': 'Welcome to the Samtendo Network public beta! Our services are very new and constantly improving, so please bare with us. If you run into any problems, please let us know.'
 						}
 					},
 					type: 'NINTENDO-NETWORK-EULA',

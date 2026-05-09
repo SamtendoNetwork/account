@@ -169,7 +169,7 @@ export class CreateEmail {
 					} else {
 						el = `<span style="color:#fff;" width="100%">${c.text}</span>`;
 					}
-					innerHTML += `\n<tr><td ${c.primary ? 'class="primary button" bgcolor="#673db6"' : 'class="secondary button" bgcolor="#373C65"'} style="font-weight:700;border-radius:10px;padding:12px" align="center">${this.addGmailDarkModeFix(el)}</td></tr>`;
+					innerHTML += `\n<tr><td ${c.primary ? 'class="primary button" bgcolor="#4ABFFF"' : 'class="secondary button" bgcolor="#373C65"'} style="font-weight:700;border-radius:10px;padding:12px" align="center">${this.addGmailDarkModeFix(el)}</td></tr>`;
 					break;
 			}
 		});
@@ -209,10 +209,10 @@ export class CreateEmail {
 		});
 
 		// the signature is baked into the template, so it needs to be added manually to the plaintext version
-		plainText += '\n\n- The Pretendo Network team';
+		plainText += '\n\n- The Samtendo Network team';
 
 		// and so is the notice about the email being auto-generated
-		plainText += '\n\nNote: This is an automatic email; please do not respond. For assistance, please visit https://forum.pretendo.network.';
+		plainText += '\n\nNote: This is an automatic email; please do not respond. For assistance, please visit https://samtendo.net.';
 
 		plainText = plainText.replace(/(<([^>]+)>)/gi, '');
 

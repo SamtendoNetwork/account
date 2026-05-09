@@ -18,7 +18,7 @@ import assets from '@/services/assets';
 import { config, disabledFeatures } from '@/config-manager';
 import { startProvisioner } from '@/provisioning';
 
-process.title = 'Pretendo - Account';
+process.title = 'Samtendo - Account';
 process.on('uncaughtException', (err, origin) => {
 	console.log(err);
 	console.log(origin);
@@ -122,6 +122,7 @@ async function main(): Promise<void> {
 
 	app.listen(config.http.port, () => {
 		LOG_SUCCESS(`HTTP server started on port ${config.http.port}`);
+		LOG_SUCCESS(`Thank you for being a Samtendo Network host.`);
 	});
 }
 

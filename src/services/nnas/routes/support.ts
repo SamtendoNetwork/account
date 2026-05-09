@@ -112,7 +112,7 @@ router.put('/email_confirmation/:pid/:code', async (request: express.Request, re
 			errors: {
 				error: {
 					code: '0130',
-					message: 'PID has not been registered yet'
+					message: 'SID has not been registered yet'
 				}
 			}
 		}).end());
@@ -161,7 +161,7 @@ router.get('/resend_confirmation', validateDeviceIDMiddleware, async (request: e
 			errors: {
 				error: {
 					code: '0130',
-					message: 'PID has not been registered yet'
+					message: 'SID has not been registered yet'
 				}
 			}
 		}).end());
@@ -190,7 +190,7 @@ router.get('/send_confirmation/pin/:email', async (request: express.Request, res
 			errors: {
 				error: {
 					code: '0130',
-					message: 'PID has not been registered yet'
+					message: 'SID has not been registered yet'
 				}
 			}
 		}).end());

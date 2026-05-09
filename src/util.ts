@@ -206,15 +206,15 @@ export function nascError(errorCode: string): URLSearchParams {
 export async function sendConfirmationEmail(pnid: mongoose.HydratedDocument<IPNID, IPNIDMethods>): Promise<void> {
 	const email = new CreateEmail()
 		.addHeader('Hello {{pnid}}!', { pnid: pnid.username })
-		.addParagraph('Your <b>Pretendo Network ID</b> activation is almost complete. Please click the link below to confirm your e-mail address and complete the activation process.')
-		.addButton('Confirm email address', `https://api.pretendo.cc/v1/email/verify?token=${pnid.identification.email_token}`)
+		.addParagraph('Your <b>Samtendo Network ID</b> activation is almost complete. Please click the link below to confirm your e-mail address and complete the activation process.')
+		.addButton('Confirm email address', `https://api.samtendo.net/v1/email/verify?token=${pnid.identification.email_token}`)
 		.addParagraph('You may also enter the following 6-digit code on your console:')
 		.addButton(pnid.identification.email_code, '', false)
 		.addParagraph('We hope you have fun using our services!');
 
 	const options = {
 		to: pnid.email.address,
-		subject: '[Pretendo Network] Please confirm your email address',
+		subject: '[Samtendo Network] Please confirm your email address',
 		email
 	};
 
@@ -225,11 +225,11 @@ export async function sendEmailConfirmedEmail(pnid: mongoose.HydratedDocument<IP
 	const email = new CreateEmail()
 		.addHeader('Dear {{pnid}}!', { pnid: pnid.username })
 		.addParagraph('Your email address has been confirmed.')
-		.addParagraph('We hope you have fun on Pretendo Network!');
+		.addParagraph('We hope you have fun on Samtendo Network!');
 
 	const options = {
 		to: pnid.email.address,
-		subject: '[Pretendo Network] Email address confirmed',
+		subject: '[Samtendo Network] Email address confirmed',
 		email
 	};
 
@@ -243,7 +243,7 @@ export async function sendEmailConfirmedParentalControlsEmail(pnid: mongoose.Hyd
 
 	const options = {
 		to: pnid.email.address,
-		subject: '[Pretendo Network] Email address confirmed for Parental Controls',
+		subject: '[Samtendo Network] Email address confirmed for Parental Controls',
 		email
 	};
 
@@ -273,7 +273,7 @@ export async function sendForgotPasswordEmail(pnid: mongoose.HydratedDocument<IP
 
 	const mailerOptions = {
 		to: pnid.email.address,
-		subject: '[Pretendo Network] Forgot Password',
+		subject: '[Samtendo Network] Forgot Password',
 		email
 	};
 
@@ -283,12 +283,12 @@ export async function sendForgotPasswordEmail(pnid: mongoose.HydratedDocument<IP
 export async function sendPNIDDeletedEmail(emailAddress: string, username: string): Promise<void> {
 	const email = new CreateEmail()
 		.addHeader('Dear {{pnid}},', { pnid: username })
-		.addParagraph('your PNID has successfully been deleted.')
-		.addParagraph('If you had a tier subscription, a separate cancellation email will be sent. If you do not receive this cancellation email, or you are still being charged for your subscription, please contact <b>@jonbarrow</b> on our [Discord server](https://discord.pretendo.network/).');
+		.addParagraph('your SNID has successfully been deleted.')
+		.addParagraph('If you had a tier subscription, a separate cancellation email will be sent. If you do not receive this cancellation email, or you are still being charged for your subscription, please contact <b>@sam51211</b> on our [Discord server](https://discord.gg/jDKvdtVyzK).');
 
 	const options = {
 		to: emailAddress,
-		subject: '[Pretendo Network] PNID Deleted',
+		subject: '[Samtendo Network] SNID Deleted',
 		email
 	};
 

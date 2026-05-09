@@ -15,7 +15,7 @@ async function APIMiddleware(request: express.Request, _response: express.Respon
 
 		request.pnid = pnid;
 	} catch (error: any) {
-		LOG_ERROR('api middleware - decode pnid: ' + error);
+		LOG_ERROR('api middleware - decode snid: ' + error);
 		if (error.stack) {
 			console.error(error.stack);
 		}
