@@ -27,7 +27,7 @@ router.get('/agreements/:type/:region/:version', (request: express.Request, resp
 						'@xsi:type': 'chunkedStoredAgreementText',
 
 						'main_title': {
-							'#cdata': 'Pretendo Network Services Agreement'
+							'#cdata': 'Samtendo Network Services Agreement'
 						},
 						'agree_text': {
 							'#cdata': 'I Accept'
@@ -60,7 +60,7 @@ router.get('/agreements/:type/:region/:version', (request: express.Request, resp
 						'@xsi:type': 'chunkedStoredAgreementText',
 
 						'main_title': {
-							'#cdata': 'Pretendo Network Services Agreement'
+							'#cdata': 'Samtendo Network Services Agreement'
 						},
 						'agree_text': {
 							'#cdata': 'I Accept'
@@ -93,7 +93,7 @@ router.get('/agreements/:type/:region/:version', (request: express.Request, resp
 						'@xsi:type': 'chunkedStoredAgreementText',
 
 						'main_title': {
-							'#cdata': 'Pretendo Network Services Agreement'
+							'#cdata': 'Samtendo Network Services Agreement'
 						},
 						'agree_text': {
 							'#cdata': 'I Accept'
