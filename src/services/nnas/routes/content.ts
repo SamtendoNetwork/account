@@ -37,84 +37,18 @@ router.get('/agreements/:type/:region/:version', (request: express.Request, resp
 						},
 						'main_text': {
 							'@index': '1',
-							'#cdata': 'Welcome to the Samtendo Network public beta! Our services are very new and constantly improving, so please bare with us. If you run into any problems, please let us know.'
+							'#cdata': 'Welcome to the Samtendo Network public beta! Our services are very new and constantly improving, so please bare with us. If you run into any problems, please let us know.\n\nFor full terms and conditions, please see samtendo.net/terms.\nIf you require more information please visit discord.samtendo.net.'
 						},
 						'sub_title': {
 							'#cdata': 'Privacy Policy'
 						},
 						'sub_text': {
 							'@index': '1',
-							'#cdata': 'Welcome to the Samtendo Network public beta! Our services are very new and constantly improving, so please bare with us. If you run into any problems, please let us know.'
+							'#cdata': 'Please see samtendo.net/privacy for our privacy policy.'
 						}
 					},
 					type: 'NINTENDO-NETWORK-EULA',
 					version: '0300'
-				},
-				{
-					country: 'US',
-					language: 'en',
-					language_name: 'Español',
-					publish_date: '2014-09-29T20:07:35',
-					texts: {
-						'@xmlns:xsi': 'http://www.w3.org/2001/XMLSchema-instance',
-						'@xsi:type': 'chunkedStoredAgreementText',
-
-						main_title: {
-							'#cdata': 'Pretendo Network Services Agreement'
-						},
-						agree_text: {
-							'#cdata': 'I Accept'
-						},
-						non_agree_text: {
-							'#cdata': 'I Decline'
-						},
-						main_text: {
-							'@index': '1',
-							'#cdata': 'Welcome to Pretendo\'s Christmas public beta! This is supplied with no liability or warranty, and is a stress test of our current services.This test is not expected to last long- term, and the data may be kept for later testing; this data will not be shared outside of Pretendo, and will be deleted at the end of our testing period.'
-						},
-						sub_title: {
-							'#cdata': 'Privacy Policy'
-						},
-						sub_text: {
-							'@index': '1',
-							'#cdata': 'Welcome to Pretendo\'s Christmas public beta! This is supplied with no liability or warranty, and is a stress test of our current services.This test is not expected to last long- term, and the data may be kept for later testing; this data will not be shared outside of Pretendo, and will be deleted at the end of our testing period.'
-						},
-					},
-					type: 'NINTENDO-NETWORK-EULA',
-					version: '0300',
-				},
-				{
-					country: 'US',
-					language: 'en',
-					language_name: 'Français',
-					publish_date: '2014-09-29T20:07:35',
-					texts: {
-						'@xmlns:xsi': 'http://www.w3.org/2001/XMLSchema-instance',
-						'@xsi:type': 'chunkedStoredAgreementText',
-
-						main_title: {
-							'#cdata': 'Pretendo Network Services Agreement'
-						},
-						agree_text: {
-							'#cdata': 'I Accept'
-						},
-						non_agree_text: {
-							'#cdata': 'I Decline'
-						},
-						main_text: {
-							'@index': '1',
-							'#cdata': 'Welcome to Pretendo\'s Christmas public beta! This is supplied with no liability or warranty, and is a stress test of our current services.This test is not expected to last long- term, and the data may be kept for later testing; this data will not be shared outside of Pretendo, and will be deleted at the end of our testing period.'
-						},
-						sub_title: {
-							'#cdata': 'Privacy Policy'
-						},
-						sub_text: {
-							'@index': '1',
-							'#cdata': 'Welcome to Pretendo\'s Christmas public beta! This is supplied with no liability or warranty, and is a stress test of our current services.This test is not expected to last long- term, and the data may be kept for later testing; this data will not be shared outside of Pretendo, and will be deleted at the end of our testing period.'
-						},
-					},
-					type: 'NINTENDO-NETWORK-EULA',
-					version: '0300',
 				}
 			]
 		}
