@@ -49,4 +49,5 @@ export interface Config {
 	datastore: {
 		signature_secret: string;
 	};
+	maintenance: boolean;
 }
