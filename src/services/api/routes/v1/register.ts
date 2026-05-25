@@ -87,17 +87,6 @@ router.post('/', async (request: express.Request, response: express.Response): P
 		return;
 	}
 
-	// REMOVE IN PROD
-	if (!email.endsWith('@samtendo.net')) {
-		response.status(400).json({
-			app: 'api',
-			status: 400,
-			error: 'Email must be from the samtendo.net domain'
-		});
-
-		return;
-	}
-
 	if (!username || username === '') {
 		response.status(400).json({
 			app: 'api',
