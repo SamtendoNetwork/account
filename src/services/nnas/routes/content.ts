@@ -37,14 +37,14 @@ router.get('/agreements/:type/:region/:version', (request: express.Request, resp
 						},
 						'main_text': {
 							'@index': '1',
-							'#cdata': 'Welcome to the Samtendo Network public beta! Our services are very new and constantly improving, so please bare with us. If you run into any problems, please let us know.\n\nFor full terms and conditions, please see samtendo.net/terms.\nIf you require more information please visit discord.samtendo.net.'
+							'#cdata': 'Welcome to the Samtendo Network public beta! Our services are very new and constantly improving, so please bare with us. If you run into any problems, please let us know.\n\nFor full terms and conditions, please see samtendo.net/terms/network.\nIf you require more information please visit discord.samtendo.net.'
 						},
 						'sub_title': {
 							'#cdata': 'Samtendo Network Privacy Policy'
 						},
 						'sub_text': {
 							'@index': '1',
-							'#cdata': 'Please see samtendo.net/privacy for our privacy policy.'
+							'#cdata': 'Please see samtendo.net/terms/privacy for our privacy policy.'
 						}
 					},
 					type: 'NINTENDO-NETWORK-EULA',
