@@ -43,16 +43,6 @@ router.post('/', async (request: express.Request, response: express.Response): P
 	const passwordConfirm = request.body.password_confirm?.trim();
 	const hCaptchaResponse = request.body.hCaptchaResponse?.trim();
 
-	if (config.maintenance) {
-		response.status(503).json({
-			app: 'api',
-			status: 503,
-			error: 'Service is currently unavailable due to maintenance. Please try again later.'
-		});
-
-		return;
-	}
-
 	if (!disabledFeatures.captcha) {
 		if (!hCaptchaResponse || hCaptchaResponse === '') {
 			response.status(400).json({
@@ -92,6 +82,17 @@ router.post('/', async (request: express.Request, response: express.Response): P
 			app: 'api',
 			status: 400,
 			error: 'Invalid email address'
+		});
+
+		return;
+	}
+
+	// REMOVE IN PROD
+	if (!email.endsWith('@samtendo.net')) {
+		response.status(400).json({
+			app: 'api',
+			status: 400,
+			error: 'Email must be from the samtendo.net domain'
 		});
 
 		return;
