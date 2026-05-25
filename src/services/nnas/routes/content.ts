@@ -40,7 +40,7 @@ router.get('/agreements/:type/:region/:version', (request: express.Request, resp
 							'#cdata': 'Welcome to the Samtendo Network public beta! Our services are very new and constantly improving, so please bare with us. If you run into any problems, please let us know.\n\nFor full terms and conditions, please see samtendo.net/terms.\nIf you require more information please visit discord.samtendo.net.'
 						},
 						'sub_title': {
-							'#cdata': 'Privacy Policy'
+							'#cdata': 'Samtendo Network Privacy Policy'
 						},
 						'sub_text': {
 							'@index': '1',
