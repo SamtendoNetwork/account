@@ -210,10 +210,10 @@ export async function sendConfirmationEmail(pnid: mongoose.HydratedDocument<IPNI
 export async function sendEmailConfirmedEmail(pnid: mongoose.HydratedDocument<IPNID, IPNIDMethods>): Promise<void>  {
 	const options = {
 		to: pnid.email.address,
-		subject: '[Pretendo Network] Email address confirmed',
+		subject: '[Samtendo Network] Email address confirmed',
 		username: pnid.username,
-		paragraph: 'your email address has been confirmed. We hope you have fun on Pretendo Network!',
-		text: `Dear ${pnid.username}, \r\n\r\nYour email address has been confirmed. We hope you have fun on Pretendo Network!`
+		paragraph: 'your email address has been confirmed. We hope you have fun on Samtendo Network!',
+		text: `Dear ${pnid.username}, \r\n\r\nYour email address has been confirmed. We hope you have fun on Samtendo Network!`
 	};
 
 	await sendMail(options);
@@ -236,7 +236,7 @@ export async function sendForgotPasswordEmail(pnid: mongoose.HydratedDocument<IP
 
 	const mailerOptions = {
 		to: pnid.email.address,
-		subject: '[Pretendo Network] Forgot Password',
+		subject: '[Samtendo Network] Forgot Password',
 		username: pnid.username,
 		paragraph: 'a password reset has been requested from this account. If you did not request the password reset, please ignore this email. If you did request this password reset, please click the link below to reset your password.',
 		link: {
@@ -252,11 +252,11 @@ export async function sendForgotPasswordEmail(pnid: mongoose.HydratedDocument<IP
 export async function sendPNIDDeletedEmail(email: string, username: string): Promise<void> {
 	const options = {
 		to: email,
-		subject: '[Pretendo Network] PNID Deleted',
+		subject: '[Samtendo Network] PNID Deleted',
 		username: username,
 		link: {
 			text: 'Discord Server',
-			href: 'https://discord.com/invite/pretendo'
+			href: 'https://discord.com/invite/samtendo'
 		},
 		text: `Your PNID ${username} has successfully been deleted. If you had a tier subscription, a separate cancellation email will be sent. If you do not receive this cancellation email, or your subscription is still being charged, please contact @jon on our Discord server`
 	};
