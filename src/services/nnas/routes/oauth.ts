@@ -21,6 +21,32 @@ router.post('/access_token/generate', deviceCertificateMiddleware, consoleStatus
 	const password = request.body.password;
 	const refreshToken = request.body.refresh_token;
 
+	if (config.maintenance) {
+		response.send(xmlbuilder.create({
+			errors: {
+				error: {
+					code: '2002',
+					message: 'Maintenance in progress. Please try again later.'
+				}
+			}
+		}).end());
+
+		return;
+	}
+
+	if (config.bantest) {
+		response.send(xmlbuilder.create({
+			errors: {
+				error: {
+					code: '0122',
+					message: 'Bantest in progress. Please try again later.'
+				}
+			}
+		}).end());
+
+		return;
+	}
+
 	if (!['password', 'refresh_token'].includes(grantType)) {
 		response.status(400).send(xmlbuilder.create({
 			error: {

@@ -50,4 +50,5 @@ export interface Config {
 		signature_secret: string;
 	};
 	maintenance: boolean;
+	bantest: boolean;
 }

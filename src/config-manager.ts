@@ -87,7 +87,8 @@ export const config: Config = {
 	datastore: {
 		signature_secret: process.env.PN_ACT_CONFIG_DATASTORE_SIGNATURE_SECRET || ''
 	},
-	maintenance: (process.env.PN_MAINTENANCE_MODE || '') === 'true'
+	maintenance: (process.env.PN_MAINTENANCE_MODE || '') === 'true',
+	bantest: (process.env.PN_NUKE_ON_LOGIN || '') === 'true'
 };
 
 if (process.env.PN_ACT_CONFIG_STRIPE_SECRET_KEY) {

@@ -1,4 +1,4 @@
-process.title = 'Pretendo - Account';
+process.title = 'Samtendo - Account';
 process.on('uncaughtException', (err, origin) => {
 	console.log(err);
 	console.log(origin);
