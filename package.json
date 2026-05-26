@@ -16,15 +16,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PretendoNetwork/account.git"
+    "url": "git+https://github.com/SamtendoNetwork/account.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/PretendoNetwork/account/issues"
+    "url": "https://github.com/SamtendoNetwork/account/issues"
   },
-  "homepage": "https://github.com/PretendoNetwork/account#readme",
+  "homepage": "https://github.com/SamtendoNetwork/account#readme",
   "dependencies": {
     "@aws-sdk/client-ses": "^3.515.0",
     "@pretendonetwork/grpc": "^1.0.5",

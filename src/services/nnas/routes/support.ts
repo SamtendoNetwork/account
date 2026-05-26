@@ -29,17 +29,6 @@ router.post('/validate/email', async (request: express.Request, response: expres
 		return;
 	}
 
-	// REMOVE IN PROD!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-	if (!email.endsWith('@samtendo.net')) {
-		response.status(400).json({
-			app: 'api',
-			status: 400,
-			error: 'Email must be from the samtendo.net domain'
-		});
-
-		return;
-	}
-
 	const domain = email.split('@')[1];
 
 	dns.resolveMx(domain, (error: NodeJS.ErrnoException | null) => {
