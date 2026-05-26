@@ -8,7 +8,7 @@
 	<body>
 		<form action=" /v1/account-settings/update" method="post">
 			<header>
-				<h1>Pretendo Network ID Settings</h1>
+				<h1>Samtendo Network ID Settings</h1>
 				<button id="close" class="fixed-bottom-button left" onclick="wiiuBrowser.jumpToBaristaAccount();">Close</button>
 				<input  id="save" class="fixed-bottom-button" type="submit" value="Submit">
 			</header>
@@ -34,7 +34,7 @@
 				</div>
 				<div class="group">
 					<h2>Gender</h2>
-					<select name="gender" id="gender">
+					<select name="gender" id="gender" onclick="genderChangeWarning()">
 					<option value="M" <% if (PNID.gender === 'M') { %>selected<% } %>>Male</option>
 					<option value="F" <% if (PNID.gender === 'F') { %>selected<% } %>>Female</option>
 					</select>
@@ -160,6 +160,12 @@
 				if(seenBirthday) return;
 				seenBirthday = true;
 				wiiuDialog.alert('Warning: Changing your birthday may cause unexpected results. You may need to re-link your PNID for the changes to apply. \n\nFor more information, see:\nhttps://preten.do/727-0002', 'I Understand');
+			}
+
+			function genderChangeWarning() {
+				if(seenGender) return;
+				seenGender = true;
+				wiiuDialog.alert('Hi', 'Fuck off, let me change my gender');
 			}
 
 			function dateValidation(element) {

@@ -18,7 +18,7 @@ const confirmationEmailTemplate = fs.readFileSync(
 
 let transporter: nodemailer.Transporter;
 
-if (!disabledFeatures.email) {
+if (true) {
 	transporter = nodemailer.createTransport({
 		host: config.email.host,
 		port: config.email.port,
@@ -31,7 +31,7 @@ if (!disabledFeatures.email) {
 }
 
 export async function sendMail(options: MailerOptions): Promise<void> {
-	if (!disabledFeatures.email) {
+	if (true) {
 		const {
 			to,
 			subject,

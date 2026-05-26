@@ -15,7 +15,7 @@ body {
 button:active,
 .server-selection input:checked + label {
 	box-shadow: inset 0 0px 10px 0 rgba(66, 45, 120, 0.75) !important;
-	color: #9D6FF3;
+	color: #6fb3f3;
 }
 
 header {
@@ -24,7 +24,7 @@ header {
 	height: 70px;
 	line-height: 70px;
 	border-bottom: 2px solid #4F2E8C;
-	background: -webkit-gradient(linear, left top, left bottom, from(#9D6FF3), to(#673DB6));
+	background: -webkit-gradient(linear, left top, left bottom, from(#6fa8f3), to(#25aadf));
 	z-index: 19;
 }
 
@@ -39,7 +39,7 @@ button,
 .button,
 input[type="submit"] {
 	font-family: Poppins, Arial, Helvetica, sans-serif;
-	color: #45297A;
+	color: #295c7a;
 	min-width: 200px;
 	-webkit-box-sizing: content-box;
 	box-sizing: content-box;
@@ -105,7 +105,7 @@ div.group > select {
 
 div.group > input[type="text"],
 div.group > input[type="date"] {
-	color: #9D6FF3;
+	color: #6fbef3;
 }
 
 div.group > select {
@@ -124,7 +124,7 @@ div.group > span {
 }
 
 div.group > svg {
-	fill: #9D6FF3;
+	fill: #6fc3f3;
 	border: none;
 	height: 40px;
 	width: 40px;
@@ -159,13 +159,13 @@ div.group > svg {
 
 .account-info > .content {
 	text-align: center;
-	color: #673DB6;
+	color: #3d94b6;
 	margin: 0;
 }
 
 .account-info > h3.content {
 	font-weight: normal;
-	color: #9D6FF3;
+	color: #6fcef3;
 	font-size: 20px;
 }
 
@@ -188,9 +188,9 @@ div.group > svg {
 }
 
 .account-info .tier-level-3 {
-	background: #6B5E84;
-	color: #CAB1FB;
-	border-color: #CAB1FB;
+	background: #5e6b84;
+	color: #b1c8fb;
+	border-color: #b1c8fb;
 }
 
 .account-info .access-level-1 {
