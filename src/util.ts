@@ -195,13 +195,13 @@ export function nascError(errorCode: string): URLSearchParams {
 export async function sendConfirmationEmail(pnid: mongoose.HydratedDocument<IPNID, IPNIDMethods>): Promise<void> {
 	const options = {
 		to: pnid.email.address,
-		subject: '[Pretendo Network] Please confirm your email address',
+		subject: '[Samtendo Network] Please confirm your email address',
 		username: pnid.username,
 		confirmation: {
-			href: `https://api.pretendo.cc/v1/email/verify?token=${pnid.identification.email_token}`,
+			href: `https://account.samtendo.net/v1/email/verify?token=${pnid.identification.email_token}`,
 			code: pnid.identification.email_code
 		},
-		text: `Hello ${pnid.username}! \r\n\r\nYour Pretendo Network ID activation is almost complete. Please click the link to confirm your e-mail address and complete the activation process: \r\nhttps://api.pretendo.cc/v1/email/verify?token=${pnid.identification.email_token} \r\n\r\nYou may also enter the following 6-digit code on your console: ${pnid.identification.email_code}`
+		text: `Hello ${pnid.username}! \r\n\r\nYour Samtendo Network ID activation is almost complete. Please click the link to confirm your e-mail address and complete the activation process: \r\nhttps://account.samtendo.net/v1/email/verify?token=${pnid.identification.email_token} \r\n\r\nYou may also enter the following 6-digit code on your console: ${pnid.identification.email_code}`
 	};
 
 	await sendMail(options);
@@ -252,13 +252,13 @@ export async function sendForgotPasswordEmail(pnid: mongoose.HydratedDocument<IP
 export async function sendPNIDDeletedEmail(email: string, username: string): Promise<void> {
 	const options = {
 		to: email,
-		subject: '[Samtendo Network] PNID Deleted',
+		subject: '[Samtendo Network] SNID Deleted',
 		username: username,
 		link: {
 			text: 'Discord Server',
-			href: 'https://discord.com/invite/samtendo'
+			href: 'https://discord.samtendo.net'
 		},
-		text: `Your PNID ${username} has successfully been deleted. If you had a tier subscription, a separate cancellation email will be sent. If you do not receive this cancellation email, or your subscription is still being charged, please contact @jon on our Discord server`
+		text: `Your SNID ${username} has successfully been deleted. If you did not request this deletion, please join our Discord server immediately for support. While we may not be able to recover your SNID, we can at least investigate the issue and ensure it doesn't happen again.`
 	};
 
 	await sendMail(options);
