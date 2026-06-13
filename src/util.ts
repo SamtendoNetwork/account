@@ -238,10 +238,10 @@ export async function sendForgotPasswordEmail(pnid: mongoose.HydratedDocument<IP
 		to: pnid.email.address,
 		subject: '[Samtendo Network] Forgot Password',
 		username: pnid.username,
-		paragraph: 'a password reset has been requested from this account. If you did not request the password reset, please ignore this email. If you did request this password reset, please click the link below to reset your password.',
+		paragraph: 'Recently, you tried to reset your password on Samtendo Network, but got an error instead. This is an intended feature because the password reset system is still in the works. If you cannot remember your password, please join our Discord server for support:',
 		link: {
-			text: 'Reset password',
-			href: `${config.website_base}/account/reset-password?token=${encodeURIComponent(passwordResetToken)}`
+			text: 'Join server',
+			href: 'https://discord.samtendo.net'
 		},
 		text: `Dear ${pnid.username}, a password reset has been requested from this account. \r\n\r\nIf you did not request the password reset, please ignore this email. \r\nIf you did request this password reset, please click the link to reset your password: ${config.website_base}/account/reset-password?token=${encodeURIComponent(passwordResetToken)}`
 	};

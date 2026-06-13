@@ -3,9 +3,9 @@
 - [Required software](#required-software)
 	- [NodeJS](#nodejs)
 	- [MongoDB](#mongodb)
+	- [Email (Zoho)](#email)
 - [Optional features](#optional-features)
 	- [Redis (optional)](#redis-optional)
-	- [Email (optional)](#email-optional)
 	- [Amazon s3 server (optional)](#amazon-s3-server-optional)
 	- [hCaptcha (optional)](#hcaptcha-optional)
 	- [CDN](#cdn)
@@ -30,7 +30,6 @@ The server assumes that MongoDB is running as replica set, ensure you have confi
 ## Optional features
 
 - [Redis](https://redis.io/) file caching
-- Email address for sending automatic emails (tested with gmail)
 - Amazon s3, or compatible, server for CDN methods
 - [hCaptcha](https://hcaptcha.com/) for website API captcha verification
 
@@ -40,7 +39,7 @@ Redis can be used to cache files read from disk. If Redis is not configured, the
 
 ### Email (optional)
 
-Events such as account creation, email verification, etc, support sending emails to users. To enable email sending, create an email address which is compatible with [Nodemailer](https://nodemailer.com/). Which email service you use does not matter, see the Nodemailer documentation for more details
+Events such as account creation, email verification, etc, support sending emails to users. You will need a free Zoho Mail account.
 
 ### Amazon s3 server (optional)
 

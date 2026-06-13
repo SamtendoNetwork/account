@@ -13,7 +13,7 @@
 				<input  id="save" class="fixed-bottom-button" type="submit" value="Submit">
 			</header>
 			<div class="account-info">
-				<img src="/v1/account-settings/mii/<%= PNID.pid %>/<%= face %>">
+				<img src="https://cdn.samtendo.net/images/NewSamtendoCircle.png">
 				<h2 class="content"><%= PNID.mii.name %></h2>
 				<h3 class="content"><%= PNID.username %></h3>
 				<h3 class="content">
@@ -34,7 +34,7 @@
 				</div>
 				<div class="group">
 					<h2>Gender</h2>
-					<select name="gender" id="gender" onclick="genderChangeWarning()">
+					<select name="gender" id="gender">
 					<option value="M" <% if (PNID.gender === 'M') { %>selected<% } %>>Male</option>
 					<option value="F" <% if (PNID.gender === 'F') { %>selected<% } %>>Female</option>
 					</select>
@@ -160,12 +160,6 @@
 				if(seenBirthday) return;
 				seenBirthday = true;
 				wiiuDialog.alert('Warning: Changing your birthday may cause unexpected results. You may need to re-link your PNID for the changes to apply. \n\nFor more information, see:\nhttps://preten.do/727-0002', 'I Understand');
-			}
-
-			function genderChangeWarning() {
-				if(seenGender) return;
-				seenGender = true;
-				wiiuDialog.alert('Hi', 'Fuck off, let me change my gender');
 			}
 
 			function dateValidation(element) {

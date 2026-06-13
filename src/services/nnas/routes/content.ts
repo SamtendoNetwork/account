@@ -44,7 +44,7 @@ router.get('/agreements/:type/:region/:version', (request: express.Request, resp
 						},
 						'sub_text': {
 							'@index': '1',
-							'#cdata': 'If your email has not been verified after an extended period of time, your account may be banned until you resolve it.\nIf you are not receiving the verification email, please join our Discord server for support.\n\nRegardless, please join the Samtendo Network Discord server anyways for the latest information. Invite: discord.samtendo.net\n\nYou should consistently check for Electrode updates to keep your console safe. You can download the latest version at any time by visiting samtendo.net/electrode. You can get pings for Electrode updates in our Discord server.'
+							'#cdata': 'This phase of Samtendo Network is a test. We are constantly experimenting and this is not final state of the service. Data may be deleted at any time. Thank you for helping us improve!\n\nIf your email has not been verified after an extended period of time, your account may be banned until you resolve it.\nIf you are not receiving the verification email, please join our Discord server for support.\n\nRegardless, please join the Samtendo Network Discord server anyways for the latest information. Invite: discord.samtendo.net\n\nYou should consistently check for Electrode updates to keep your console safe. You can download the latest version at any time by visiting samtendo.net/electrode. You can get pings for Electrode updates in our Discord server.'
 						}
 					},
 					type: 'NINTENDO-NETWORK-EULA',

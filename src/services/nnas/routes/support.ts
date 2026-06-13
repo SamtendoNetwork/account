@@ -133,11 +133,10 @@ router.get('/resend_confirmation', async (request: express.Request, response: ex
  */
 router.get('/forgotten_password/:pid', async (request: express.Request, response: express.Response): Promise<void> => {
 	const pid = Number(request.params.pid);
-
+	const one = 1;
 	const pnid = await getPNIDByPID(pid);
 
 	if (!pnid) {
-		// TODO - Better errors
 		response.status(400).send(xmlbuilder.create({
 			errors: {
 				error: {
@@ -151,9 +150,22 @@ router.get('/forgotten_password/:pid', async (request: express.Request, response
 		return;
 	}
 
-	await sendForgotPasswordEmail(pnid);
+	if (one === 1) { // Placeholder condition - replace with actual check
+		await sendForgotPasswordEmail(pnid);
 
-	response.status(200).send('');
+		response.send(xmlbuilder.create({
+			errors: {
+				error: {
+					code: '0123',
+					message: 'Service has expired'
+				}
+			}
+		}).end());
+
+		return;
+	}
+
+	//response.status(200).send('');
 });
 
 export default router;
