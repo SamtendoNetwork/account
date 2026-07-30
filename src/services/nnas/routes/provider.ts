@@ -36,7 +36,7 @@ router.get('/service_token/@me', async (request: express.Request, response: expr
 			errors: {
 				error: {
 					code: '1021',
-					message: 'The requested game server was not found'
+					message: 'The requested game server was not found at client'
 				}
 			}
 		}).end());
@@ -52,7 +52,7 @@ router.get('/service_token/@me', async (request: express.Request, response: expr
 			errors: {
 				error: {
 					code: '1021',
-					message: 'The requested game server was not found'
+					message: 'The requested game server was not found at title'
 				}
 			}
 		}).end());
@@ -68,7 +68,7 @@ router.get('/service_token/@me', async (request: express.Request, response: expr
 			errors: {
 				error: {
 					code: '1021',
-					message: 'The requested game server was not found'
+					message: 'The requested game server was not found at server/AES'
 				}
 			}
 		}).end());
@@ -175,7 +175,7 @@ router.get('/nex_token/@me', async (request: express.Request, response: express.
 			errors: {
 				error: {
 					code: '1021',
-					message: 'The requested game server was not found'
+					message: 'The requested game server was not found at server/AES'
 				}
 			}
 		}).end());
@@ -204,7 +204,7 @@ router.get('/nex_token/@me', async (request: express.Request, response: express.
 			errors: {
 				error: {
 					code: '1021',
-					message: 'The requested game server was not found'
+					message: 'The requested game server was not found at title'
 				}
 			}
 		}).end());

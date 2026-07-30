@@ -66,7 +66,6 @@ router.get('/ui/profile', async function (request: express.Request, response: ex
 		const region: Country | undefined = regionsList.find((region) => region.iso_code === countryCode);
 
 		const miiFaces = ['normal_face', 'smile_open_mouth', 'sorrow', 'surprise_open_mouth', 'wink_left', 'frustrated'];
-		const face = miiFaces[crypto.randomInt(5)];
 
 		const notice = request.query.notice ? request.query.notice.toString() : undefined;
 
@@ -75,7 +74,6 @@ router.get('/ui/profile', async function (request: express.Request, response: ex
 		response.render('index.ejs', {
 			PNID,
 			regionTimezones,
-			face,
 			notice,
 			accountLevel,
 			regions: region ? region.regions: [],
